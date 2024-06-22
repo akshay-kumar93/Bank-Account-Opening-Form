@@ -1,0 +1,92 @@
+﻿@model BankAccountOpeningForm.Models.AccountOpeningForm
+
+@{
+    ViewData["Title"] = "New Account Opening Form";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="CustTitle" class="control-label"></label>
+        <select asp-for="CustTitle" class="form-control">
+            <option value="1">Mr</option>
+            <option value="2">Ms</option>
+            <option value="3">Mrs</option>
+            <option value="4">Mst</option>
+            <option value="5">Baby</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="CustFirstName" class="control-label"></label>
+        <input asp-for="CustFirstName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="CustMiddleName" class="control-label"></label>
+        <input asp-for="CustMiddleName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="CustLastName" class="control-label"></label>
+        <input asp-for="CustLastName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="CustSex" class="control-label"></label>
+        <select asp-for="CustSex" class="form-control">
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+            <option value="3">Other</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="CustDateOfBirth" class="control-label"></label>
+        <input asp-for="CustDateOfBirth" class="form-control" type="date" />
+    </div>
+    <div class="form-group">
+        <label asp-for="CustAge" class="control-label"></label>
+        <input asp-for="CustAge" class="form-control" type="number" />
+    </div>
+    <div class="form-group">
+        <label asp-for="CustStdCode" class="control-label"></label>
+        <input asp-for="CustStdCode" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="CustTelephone" class="control-label"></label>
+        <input asp-for="CustTelephone" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="CustMobile" class="control-label"></label>
+        <input asp-for="CustMobile" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="CustEmailId" class="control-label"></label>
+        <input asp-for="CustEmailId" class="form-control" type="email" />
+    </div>
+    <div class="form-group">
+        <label asp-for="CustStateCode" class="control-label"></label>
+        <input asp-for="CustStateCode" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="CustCityCode" class="control-label"></label>
+        <input asp-for="CustCityCode" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="CustBranchCode" class="control-label"></label>
+        <input asp-for="CustBranchCode" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="CustAccountType" class="control-label"></label>
+        <input asp-for="CustAccountType" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="CustPreferredLanguage" class="control-label"></label>
+        <select asp-for="CustPreferredLanguage" class="form-control">
+            <option value="1">English</option>
+            <option value="2">Spanish</option>
+            <!-- Add other languages as needed -->
+        </select>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>
